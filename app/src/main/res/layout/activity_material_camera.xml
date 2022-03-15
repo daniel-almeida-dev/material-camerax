@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaterialCameraActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/viewImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:scaleType="centerCrop"
+        android:visibility="invisible" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_take_picture"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/transparent"
+        android:elevation="8dp"
+        app:icon="@drawable/ic_take_picture"
+        app:iconGravity="top"
+        app:iconSize="100dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save_picture"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:text="@string/btn_save_pic"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:visibility="invisible"
+        app:icon="@drawable/ic_save_pic"
+        app:iconGravity="textTop"
+        app:iconSize="50dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_centerline"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_take_another"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/transparent"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:text="@string/btn_take_another"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:visibility="invisible"
+        app:icon="@drawable/ic_retake_pic"
+        app:iconGravity="textTop"
+        app:iconSize="50dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_centerline"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_flash_config"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="15dp"
+        android:background="@android:color/transparent"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:textSize="9sp"
+        app:icon="@drawable/ic_flash_auto"
+        app:iconGravity="top"
+        app:iconSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_cam_change"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cam_change"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="15dp"
+        android:background="@android:color/transparent"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:textSize="9sp"
+        app:icon="@drawable/ic_cam_front"
+        app:iconGravity="top"
+        app:iconSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sld_zoom_control"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:stepSize="1"
+        android:layout_marginEnd="-120dp"
+        android:layout_marginBottom="40dp"
+        android:valueFrom="1"
+        android:valueTo="16"
+        android:rotation="270"
+        app:trackColor="@color/white"
+        app:tickColor="@color/black"
+        app:thumbColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_centerline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

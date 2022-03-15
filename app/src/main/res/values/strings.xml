@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MaterialCameraX</string>
+    <string name="btn_save_pic">Save</string>
+    <string name="btn_take_another">Take Another</string>
+    <string name="temp_img">temp_img</string>
+    <string name="default_success_message">Image saved with success</string>
+    <string name="default_error_message">An error occurred while trying to save the image</string>
+    <string name="default_permission_error_message">Permissions not granted by the user</string>
+</resources>
